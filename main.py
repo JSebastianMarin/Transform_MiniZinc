@@ -23,17 +23,17 @@ class ValleApp:
 
         # Área de texto para entrada
         ttk.Label(main_frame, text="Entrada:").grid(row=0, column=0, sticky=tk.W)
-        self.input_text = scrolledtext.ScrolledText(main_frame, width=40, height=15)
-        self.input_text.grid(row=1, column=0, padx=5, pady=5)
+        self.input_text = scrolledtext.ScrolledText(main_frame, width=40, height=10)
+        self.input_text.grid(row=1, column=0, padx=5, pady=5, sticky=tk.N)
 
         # Botón de solución
         self.solve_button = ttk.Button(main_frame, text="Generar MiniZinc", command=self.generate_minizinc)
-        self.solve_button.grid(row=2, column=0, pady=10)
+        self.solve_button.grid(row=1, column=0, pady=10)
 
         # Área de texto para salida MiniZinc
-        ttk.Label(main_frame, text="Código MiniZinc:").grid(row=0, column=1, sticky=tk.W)
+        ttk.Label(main_frame, text="Código MiniZinc:").grid(row=0, column=2, sticky=tk.W)
         self.output_text = scrolledtext.ScrolledText(main_frame, width=90, height=30)
-        self.output_text.grid(row=1, column=1, padx=5, pady=5)
+        self.output_text.grid(row=1, column=2, padx=5, pady=5)
 
         # Texto de ejemplo
         self.input_text.insert(tk.END, example_text)
