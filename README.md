@@ -1,1 +1,1 @@
-# Tranform MiniZinc
+# Transform MiniZinc
